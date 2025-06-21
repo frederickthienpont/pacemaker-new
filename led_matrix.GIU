@@ -1,0 +1,24 @@
+#include <Adafruit_GFX.h>
+#include <Max72xxPanel.h>
+
+// Instellen van de matrix
+#define PIN_CLK   13
+#define PIN_CS    10
+#define PIN_DIN   11
+#define MAX_DEVICES 1
+Max72xxPanel matrix = Max72xxPanel(PIN_CS, PIN_CLK, PIN_DIN, MAX_DEVICES);
+
+void setup() {
+  matrix.setIntensity(5); // Zet de helderheid van de matrix
+  matrix.setRotation(0);  // Zet de rotatie
+  matrix.begin();
+}
+
+void loop() {
+  // Toon tekst op de matrix (zoals 'WAARSCHUWING')
+  matrix.clear();
+  matrix.setCursor(0, 0);
+  matrix.print("WAARSCHUWING");
+  matrix.write();
+  delay(1000);  // Wacht een seconde
+}
