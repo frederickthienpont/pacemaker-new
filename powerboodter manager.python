@@ -1,0 +1,18 @@
+const int powerPin = 7; // Simulatie pin voor powerbooster
+
+void setup() {
+  pinMode(powerPin, OUTPUT);
+  digitalWrite(powerPin, LOW); // Zet de powerbooster eerst uit
+}
+
+void loop() {
+  if (batteryLevel <= 30) {
+    // Zet powerbooster aan wanneer de batterij onder de 30% komt
+    digitalWrite(powerPin, HIGH); 
+    Serial.println("Powerbooster aan - batterij onder 30%");
+  } else {
+    digitalWrite(powerPin, LOW);  // Zet uit als de batterij weer op peil is
+  }
+
+  delay(5000); // Wacht 5 seconden voor de volgende controle
+}
