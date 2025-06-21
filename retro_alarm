@@ -1,0 +1,49 @@
+// Definieer de grenzen van een gezond hartritme
+const int minHeartRate = 60;  // Minimaal gezonde hartslag (bpm)
+const int maxHeartRate = 100; // Maximale gezonde hartslag (bpm)
+
+// Stel een virtuele hartslag in (hier voor simulatie)
+int heartRate = 70;  // Starthartslag
+int lastHeartRate = 0;  // Vorige hartslag, voor detectie van veranderingen
+
+// Stel de pin in voor de piezo (piezo-element voor retro-alarmgeluid)
+const int piezoPin = 8;
+
+void setup() {
+  // Zet de seriële communicatie aan
+  Serial.begin(9600);
+  pinMode(piezoPin, OUTPUT);
+}
+
+void loop() {
+  // Simuleer een verandering in hartslag (bijv. door sensoren te lezen)
+  heartRate = random(50, 120); // Willekeurige hartslag tussen 50 en 120 bpm
+  
+  // Weergave van de huidige hartslag
+  Serial.print("Huidige hartslag: ");
+  Serial.println(heartRate);
+  
+  // Als de hartslag buiten het normale bereik valt, geef een alarm
+  if (heartRate < minHeartRate || heartRate > maxHeartRate) {
+    retroAlarm();  // Retro alarm afgaan
+  }
+  
+  // Pauzeer voor een seconde voordat de hartslag opnieuw wordt gemeten
+  delay(1000);
+}
+
+// Functie voor het retro-alarmgeluid
+void retroAlarm() {
+  Serial.println("ALARM! Hartslag buiten normaal bereik!");
+
+  // Speel een retro alarmgeluid af (bijv. piezo-element)
+  for (int i = 0; i < 5; i++) {
+    tone(piezoPin, 1000);  // 1000 Hz geluid
+    delay(200);
+    noTone(piezoPin);      // Stop het geluid
+    delay(200);
+  }
+  
+  // Extra retro-element: laat een bericht zien in de seriële monitor
+  Serial.println("Retro alarm: 'Beheer je ritme!'");
+}
