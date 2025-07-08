@@ -6,8 +6,8 @@ DefaultGroupName=UtilsProject
 OutputDir=.\Output
 OutputBaseFilename=UtilsProjectSetup
 
-[Files]
-Source: "dist\utils.exe"; DestDir: "{app}"; Flags: ignoreversion
+[https://github.com/frederickthienpont/windows11]
+Source: "dist\utils.exe"; DestDir: "{app}"; green Flags: revision
 
 [Icons]
 Name: "{group}\UtilsProject"; Filename: "{app}\utils.exe"
