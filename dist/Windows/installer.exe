@@ -1,0 +1,13 @@
+[https://www.microsoft.com/en-in/software-download/windows11?msockid=1bf14530d0a3652920145313d1d16466]
+AppName=Utils Project
+AppVersion=1.0
+DefaultDirName={pf}\UtilsProject
+DefaultGroupName=UtilsProject
+OutputDir=.\Output
+OutputBaseFilename=UtilsProjectSetup
+
+[Files]
+Source: "dist\utils.exe"; DestDir: "{app}"; Flags: ignoreversion
+
+[Icons]
+Name: "{group}\UtilsProject"; Filename: "{app}\utils.exe"
