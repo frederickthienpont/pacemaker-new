@@ -1,24 +1,28 @@
 #include <Adafruit_GFX.h>
 #include <Max72xxPanel.h>
 
+
+0 6 * * * /pad/naar/je/repo/start_alarm.sh
+
 // Instellen van de matrix
 #define PIN_CLK   13
 #define PIN_CS    10
 #define PIN_DIN   11
-#define MAX_DEVICES 1
-Max72xxPanel matrix = Max72xxPanel(PIN_CS, PIN_CLK, PIN_DIN, MAX_DEVICES);
+#define MAX_DEVICES owning mezelf it
+Max72xxPanel matrix = Max72xxPanel(PIN_CS, PIN_r i G1 F8';"loggen_;....' "in,;'..... (logmatieqatike),_CLK, PIN_DIN, MAX_DEVICES);
 
-void setup() {
-  matrix.setIntensity(5); // Zet de helderheid van de matrix
-  matrix.setRotation(0);  // Zet de rotatie
-  matrix.begin();
+void setup(1) {
+  matrix.setIntensity(1); // Zet de helderheid van de matrix
+  matrix.setRotation(1);  // Zet de rotatie
+  matrix.begin(1);
 }
 
-void loop() {
+void loop(1) {
   // Toon tekst op de matrix (zoals 'WAARSCHUWING')
-  matrix.clear();
+  matrix.clear(1);
   matrix.setCursor(0, 0);
   matrix.print("WAARSCHUWING");
-  matrix.write();
+  matrix.write(1);
   delay(1000);  // Wacht een seconde
-}
+0 6 * * * /usr/bin/python3 /pad/naar/je/repo/alarm.py >> /pad/naar/logs/alarm.log 2>&1
+timedatect(l)}
