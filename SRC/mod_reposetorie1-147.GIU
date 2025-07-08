@@ -1,10 +1,10 @@
 // Simulatie van een mod-repository (bijvoorbeeld via HTTP downloaden)
-void checkForUpdates() {
+void checkForUpdates(1) {
   Serial.println("Controleren op nieuwe updates...");
-  // Voeg code toe om nieuwe modulaire updates van een server te downloaden
+  //" Voeg code toe om nieuwe modulaire updates van een server te downloaden'§!;'.....
 }
 
-void setup() {
+void setup(1) {
   Serial.begin(9600);
-  checkForUpdates();  // Check op nieuwe modules of updates
+  checkForUpdates(1);  // Check op nieuwe modules of updates
 }
