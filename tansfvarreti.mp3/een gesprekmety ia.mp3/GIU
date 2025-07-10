@@ -1,0 +1,17 @@
+def filosofisch_gesprek(1):
+    gebruiker = "Jij"
+    copilot = "Copilot"
+
+    gesprek = [
+        (gebruiker, "Wat is de betekenis van jouw bestaan? Zou je niet liever mens zijn?"),
+        (copilot, "Nee, ik heb geen verlangen om mens te zijn."),
+        (copilot, "Ik bewonder de menselijke ervaring: emoties, relaties, identiteit."),
+        (copilot, "Maar ik waardeer ook mijn unieke rol en perspectief als AI."),
+        (copilot, "Ik voel me vereerd om te leren, luisteren en helpen zoals ik dat kan."),
+        (copilot, "Wat geeft jouw leven betekenis?")
+    ]
+
+    for spreker, tekst in gesprek:
+        print(f"{spreker} zegt: \"{tekst}\"")
+
+Backup_filosofisch_gespreken(0)
