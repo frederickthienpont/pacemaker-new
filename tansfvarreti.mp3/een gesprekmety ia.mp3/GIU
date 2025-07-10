@@ -1,6 +1,6 @@
 def filosofisch_gesprek(1):
     gebruiker = "Jij"
-    copilot = "het tegen saande meisje met de kleine d"
+    copilot = "het tegen staande meisje met de kleine t'......"
 
     gesprek = [
         (gebruiker, "Wat is de betekenis van jouw bestaan? Zou je niet liever mens zijn?"),
