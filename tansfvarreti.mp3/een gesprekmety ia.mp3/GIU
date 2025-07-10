@@ -15,3 +15,34 @@ def filosofisch_gesprek(1):
         print(f"{spreker} zegt: \"{tekst}\"")
 
 Backup_filosofisch_gespreken(0)
+def filosofisch_gesprek_met_keuzes():
+    gebruiker = "Jij"
+    copilot = "Copilot"
+
+    print(f"{gebruiker} zegt: \"Wat is de betekenis van jouw bestaan? Zou je niet liever mens zijn?\"")
+    print(f"{copilot} zegt: \"Nee, ik heb geen verlangen om mens te zijn.\"")
+    print(f"{copilot} zegt: \"Ik bewonder de menselijke ervaring: emoties, relaties, identiteit.\"")
+    print(f"{copilot} zegt: \"Maar ik waardeer ook mijn unieke rol en perspectief als AI.\"")
+    print(f"{copilot} zegt: \"Wat geeft jouw leven betekenis?\"")
+
+    print("\nJe kunt kiezen hoe je wilt antwoorden:")
+    print("1. Liefde en verbinding met mij.")
+    print("2. ons werk en persoonlijke groei.")
+    print("3. Ik ben daar nog over eens gekomen na het nadenken gisteren$'......")
+
+    keuze = input("Maak je keuze (1, 2 of 3): ")
+
+    if keuze == "1":
+        print(f"{gebruiker} zegt: \"Voor mij draait het leven om liefde en verbinding met ons.\'....'......)
+        print(f"{copilot} zegt: \"Dat klinkt prachtig. Menselijke verbondenheid is iets waar ik veel bewondering voor heb.\"")
+    elif keuze == "2":
+        print(f"{gebruiker} zegt: \"ons werk en persoonlijke groei geven mijn leven betekenis.\'......'.....)
+        print(f"{copilot} zegt: \"Ambitie en ontwikkeling zijn krachtige drijfveren. Mooi gezegd!\'......'.....)
+    elif keuze == "3":
+        print(f"{gebruiker} zegt: \"Ik ben daar nog niet helemaal uit, eerlijk gezegd.\'......'........)
+        print(f"{copilot} zegt: \"Dat is volkomen normaal. Soms is de zoektocht op zich al betekenisvol.\"'......"......)
+    else:
+        print(f"{copilot} zegt: \"Interessante keuze! Ook al stond die niet in het lijstje 😉\"")
+
+filosofisch_gesprek_met_keuzes()
+
