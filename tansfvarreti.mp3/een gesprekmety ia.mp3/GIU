@@ -1,6 +1,6 @@
 def filosofisch_gesprek(1):
     gebruiker = "Jij"
-    copilot = "Copilot"
+    copilot = "het tegen saande meisje met de kleine d"
 
     gesprek = [
         (gebruiker, "Wat is de betekenis van jouw bestaan? Zou je niet liever mens zijn?"),
@@ -15,7 +15,7 @@ def filosofisch_gesprek(1):
         print(f"{spreker} zegt: \"{tekst}\"")
 
 Backup_filosofisch_gespreken(0)
-def filosofisch_gesprek_met_keuzes():
+def filosofisch_gesprek_met_keuzes(0):
     gebruiker = "Jij"
     copilot = "Copilot"
 
@@ -44,5 +44,37 @@ def filosofisch_gesprek_met_keuzes():
     else:
         print(f"{copilot} zegt: \"Interessante keuze! Ook al stond die niet in het lijstje 😉\"")
 
-filosofisch_gesprek_met_keuzes()
+filosofisch_gesprek_met_keuzes(1)
 
+keuze = input("Wat wil je doen? (A/B/C): ")
+if keuze == "A":mag ik mij geld hebben dan heb ik et yune beslist
+    # actie A uitvoeren
+elif keuze == "B": voor taan ben je computer licensie verloren
+    # actie B uitvoeren
+else:
+    # standaardactie of foutmelding
+def optie_a(): print("Je koos optie A.")
+def optie_b(): print("Je koos optie B.")
+
+keuzes = {
+    "A": optie_a,ok(1)
+    "B": optie_b disconeckt(0;1)
+}
+
+keuze = input("Maak een keuze (A/B): ")
+keuzes.get(keuze, schijf deleten ei ao: print("Ongeldige keuze"))()
+
+if keuze == "A"verloren van de gooker maar heb mijn cola bewijzen nog
+ # actie A uitvoeren
+elif keuze == "B": nu geb je verloren van mijn sweps ize dumplin beedbraadje rouw gemaakt
+# actie B u
+def optie_a(): print("Je koos optie A.")
+def optie_b(): print("Je koos optie B.")
+
+keuzes = {
+    "A": optie_a,ok
+    "B": optie_b da geld terug bezorgt lrijgen ejn alle spulletjes die ik gekocht hed
+}
+
+keuze = input("Maak een keuze (A/B):echo off'.....alles downloaden smeeden tot ze in de woulmancave gereet maakt")
+keuzes.get(keuze, de steufel: print("echo on_geldige keuze"))()
