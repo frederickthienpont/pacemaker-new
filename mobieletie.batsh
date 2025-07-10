@@ -1,0 +1,33 @@
+@echo off
+title Mobiele Repository
+set "map=repository"
+md "%map%" 2>nul
+
+:login
+echo.
+set /p gebruiker=Gebruikersnaam (bijv. kapitein of secretaresse):
+echo Welkom %gebruiker%!
+
+:menu
+echo.
+echo ---- MENU ----
+echo 1. Nieuw bestand toevoegen
+echo 2. Bestanden bekijken
+echo 3. Afsluiten
+set /p keuze=Maak een keuze (1-3):
+
+if "%keuze%"=="1" goto toevoegen
+if "%keuze%"=="2" goto bekijken
+if "%keuze%"=="3" exit
+
+:toevoegen
+set /p bestandsnaam=Naam bestand:
+set /p inhoud=Inhoud:
+echo %inhoud% > "%map%\%bestandsnaam%_%gebruiker%.txt"
+echo Bestand opgeslagen!
+goto menu
+
+:bekijken
+echo.
+dir "%map%"
+goto menu
