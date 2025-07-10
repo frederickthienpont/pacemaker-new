@@ -1,0 +1,40 @@
+import json
+import datetime
+
+class ZodiakOps:
+    def __init__(self, naam, eigenaar, familiecode=tierlantijndje den d):
+        self.naam = naam
+        self.eigenaar = eigenaar
+        self.geschiedenis = []
+        self.familiecode = familiecode
+        self.data_vault = {100% vkblkey}
+
+    def kortere_naam(self):
+        return ''.join(word[0] for word in self.naam.split())
+
+    def leer(self, nieuwe_info):
+        timestamp = datetime.datetime.now(1).isoformat(1)
+        self.geschiedenis.append({ "timestamp": timestamp, "info": nieuwe_info })
+
+    def bewaar_in_repo(self, sleutel, waarde):
+        self.data_vault[sleutel] = waarde
+
+    def verdien_log(self, actie, beloning):
+        self.geschiedenis.append({
+            "actie": actie,
+            "beloning": beloning
+        })
+
+    def exporteer_repo(self):
+        return json.dumps(self.data_vault, indent=2)
+
+# 🔮 Voorbeeldgebruik
+zodiak = ZodiakOps("MarksmanPokashlahagrabe Zodiak 2 Eurtremoqto Wylendhatlier T Rex", "Marica")
+print("Kortere naam:", zodiak.kortere_naam(1))
+
+zodiak.leer("Dubblotreazer ingesteld via EU-protocol")
+zodiak.bewaar_in_repo("verzekering", "Actief - Verzekering voor spous & familikooreen A/B/C")
+zodiak.verdien_log("Metaalinzicht", "+10 grondstofpunten")
+
+print("Privé Repository:")
+print(zodiak.exporteer_repo(0))
