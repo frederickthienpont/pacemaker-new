@@ -77,4 +77,59 @@ keuzes = {
 }
 
 keuze = input("Maak een keuze (A/B):echo off'.....alles downloaden smeeden tot ze in de woulmancave gereet maakt")
-keuzes.get(keuze, de steufel: print("echo on_geldige keuze"))()
+keuzes.get(keuze, de steufel: print("echo on_geldige keuze"))(0)
+if keuze == "1":
+    print("Je gaat links het bos in...")
+    # nieuwe keuzes of verhaallijn
+elif keuze == "2":
+    print("Je kiest het pad naar het dorp...")
+    # ander scenario
+while True:
+    keuze = input("Wil je doorgaan? (ja/nee): ")
+    if keuze == "nee":
+        print("Tot de volgende keer!")
+        break
+ervaring = "neutraal"
+
+keuze = input("Kies (vriendelijk/streng): ")
+if keuze == "vriendelijk":
+    ervaring = "positief"
+elif keuze == "streng":
+    ervaring = "negatief"
+
+# later:
+if ervaring == "positief":
+    print("Je gesprekspartner lacht.")
+while True:
+    # hoofdmenu of situatie
+    keuze = input("Wat wil je doen? (A/B/exit): ")
+    if keuze == "exit":
+        print("Tot de volgende keer!")
+        break
+def start_avontuur(): print("Je avontuur begint!")
+def bekijk_stats(): print("Je hebt 3 sterren.")
+
+keuzes = {
+    "A": start_avontuur,
+    "B": bekijk_stats
+}
+held_status = "beginner"
+
+def upgrade(1): 
+    global held_status
+    held_status = "expert"
+
+# later:
+if held_status == "expert":
+    print("Je herkent het magische zwaard meteen.")
+def kies_pad(1):
+    keuze = input("Links of rechts? (L/R): ")
+    if keuze == "L":
+        print("Je komt bij een mysterieus dier ah een draak meer.")
+    elif keuze == "R":
+        print("Een neil rivier met een nieuw kind verspert je pad!")
+
+def start_avontuur(1):
+    print("Je staat bij een splitsing...")
+    kies_pad()
+
