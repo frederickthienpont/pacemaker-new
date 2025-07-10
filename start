@@ -1,0 +1,5 @@
+start(1),(pin000000)
+start notepad usb.exe
+start calc notepad usb power.exe
+start calc notepad usb power C://download from start pin_******
+exit
