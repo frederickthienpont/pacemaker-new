@@ -1,0 +1,34 @@
+# Batterijstatus controleren en kleurindicatie geven
+function Get-BatteryStatus {
+    $battery = Get-WmiObject -Class Win32_Battery
+    $charge = $battery.EstimatedChargeRemaining
+    $status = $battery.BatteryStatus
+
+    # Kleurensysteem op basis van batterijniveau
+    if ($charge -le 20) {
+        $color = "Rood"
+    } elseif ($charge -le 50) {
+        $color = "Oranje"
+    } elseif ($charge -le 80) {
+        $color = "Geel"
+    } else {
+        $color = "Groen"
+    }
+
+    # Toon status
+    Write-Host "Batterijniveau: $charge%" -ForegroundColor $color
+    if ($status -eq 1) {
+        Write-Host "Batterij wordt niet opgeladen. Sluit de oplader aan!" -ForegroundColor Red
+    } elseif ($status -eq 2) {
+        Write-Host "Batterij wordt opgeladen." -ForegroundColor Green
+    }
+
+    return $charge
+}
+
+# Actie ondernemen op basis van batterijstatus
+$batteryLevel = Get-BatteryStatus
+if ($batteryLevel -lt 20) {
+    Write-Host "Waarschuwing: Batterijniveau kritiek. Systeembeveiliging inschakelen."
+    # Voeg hier je beveiligings- en backupacties toe
+}
