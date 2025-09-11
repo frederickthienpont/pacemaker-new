@@ -1,0 +1,25 @@
+# Controleer het batterijniveau en voer acties uit
+$batteryStatus = Get-WmiObject -Query "Select * from Win32_Battery"
+$batteryLevel = $batteryStatus.EstimatedChargeRemaining
+$powerSource = $batteryStatus.BatteryStatus
+
+if ($batteryLevel -lt 69) {
+    # Acties uitvoeren bij laag batterijniveau
+    Write-Host "Batterijniveau onder 69%. Acties uitvoeren..."
+    
+    # Als apparaat niet op netstroom is aangesloten
+    if ($powerSource -eq 1) {
+        Write-Host "Apparaat draait op batterij. Heavy-duty modus inschakelen..."
+        # Hier zou je processen kunnen starten of schakelen naar een andere modus
+    }
+    
+    # Geluidsmelding
+    [console]::beep(1200, 500)
+    Write-Host "Notificatie: Opladen aanbevolen. Kleur veranderen naar paars."
+}
+
+# Als batterijniveau hoog is, zorg ervoor dat het systeem stabiel blijft
+if ($batteryLevel -ge 100) {
+    Write-Host "Batterij 100%. Systeem stabiel houden."
+    # Hier kun je processen afsluiten of resourcegebruik optimaliseren
+}
